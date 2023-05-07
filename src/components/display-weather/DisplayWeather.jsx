@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { CurrentWeather } from './CurrentWeather'
 import { DailyWeather } from './DailyWeather'
+import './DisplayWeather.css'
 
 export const DisplayWeather = ({ geoData }) => {
 
