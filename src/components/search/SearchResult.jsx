@@ -1,10 +1,13 @@
 import React from 'react'
 import "./SearchResult.css"
 
-export const SearchResult = ({ result, setResultData }) => {
+export const SearchResult = ({ result, setResultData, setHideResults}) => {
 
   const handleSetResult = () => {
-    if(result !== undefined) setResultData(result)
+    if(result !== undefined) {
+      setResultData(result);
+      setHideResults(""); 
+    }
   };
   
   return (

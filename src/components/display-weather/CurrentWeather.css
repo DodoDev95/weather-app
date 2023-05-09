@@ -7,6 +7,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin-top: 20px;
 }
 
 .display-location {
@@ -15,22 +16,43 @@
   padding: 10px 20px;
   border-radius: 5px;
   margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
 }
 
-.display-location span:not(:last-child) {
-  margin-right: 10px;
+.display-location span:first-child {
+  font-size: 3rem;
+  margin-bottom: 15px;
 }
 
 .animated-weather {
+  margin: 0px 15px 0px 15px;
 }
 
 .current-temp {
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: bold;
-  margin-right: 20px;
+  margin: 0px 15px 0px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.current-temp span {
+  font-size: 1rem;
 }
 
 .wind-speed {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0px 15px 0px 15px;
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+}
+
+.wind-speed span {
+  font-size: 1rem;
 }
 
 @media (max-width: 767px) {
@@ -39,12 +61,20 @@
     align-items: flex-start;
   }
 
+  .current-weather-container canvas {
+    align-self: center;
+  }
+
   .display-location {
-    margin-bottom: 20px;
-    margin-right: 0;
+    margin-bottom: 15px;
+    margin-right: 0px;
   }
 
   .current-temp {
-    margin-right: 0;
+    margin: 15px 0px 15px 0px;
+  }
+
+  .wind-speed {
+    margin-left: 0px;
   }
 }

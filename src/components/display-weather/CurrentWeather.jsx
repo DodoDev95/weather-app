@@ -11,8 +11,10 @@ export const CurrentWeather = ({ name, admin1, country, currentWeather }) => {
     <div className='current-weather-container'>
       <div className='display-location'><span>{name}</span><span>{admin1}</span><span>{country}</span></div>
       <AnimatedCurrentWeather weatherCode={currentWeather.weathercode}/>
-      <div className='current-temp'>{currentWeather.temperature}°C</div>
-      <div className='wind-speed'></div>
+      <div className='current-temp'><span>Current temp.</span>
+        {currentWeather.temperature}°C</div>
+      <div className='wind-speed'><span>Wind speed</span>
+        {currentWeather.windspeed} m/s</div>
     </div>
   )
 }

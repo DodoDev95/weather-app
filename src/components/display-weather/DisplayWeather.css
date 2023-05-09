@@ -1,8 +1,8 @@
 .weather-display {
   display: flex;
   align-items: center;
+  justify-content: center;
   min-width: 400px;
-  margin: auto;
   min-height: 20vh;
-  width: 80%;
+  width: 100%;
 }
