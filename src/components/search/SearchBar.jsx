@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import "./SearchBar.css";
 
@@ -8,6 +8,8 @@ export const SearchBar = ({ setSearchResults, setHideResults }) => {
   useEffect(() => {
     const inputTimeout = setTimeout(() => {
       fetchData(input);
+      setHideResults(input);
+      
     }, 500);
     return () => clearTimeout(inputTimeout);
   }, [input]);
@@ -16,7 +18,8 @@ export const SearchBar = ({ setSearchResults, setHideResults }) => {
     const response = await fetch(
       `https://geocoding-api.open-meteo.com/v1/search?name=${value}&count=10&language=en`
     );
-    if (value) {
+
+    if (response.ok) {
       const { results } = await response.json();
 
       return setSearchResults(results);
@@ -25,7 +28,6 @@ export const SearchBar = ({ setSearchResults, setHideResults }) => {
 
   const handleChange = (value) => {
     setInput(value);
-    setHideResults(value);
   };
 
 

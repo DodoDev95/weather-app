@@ -1,15 +1,15 @@
 import React from 'react'
 import ReactAnimatedWeather from 'react-animated-weather'
 
-function getIconString(weathercode) {
+function getIconString(weathercode, dayornight) {
 
   switch (weathercode) {
     case 0:
-    return "CLEAR_DAY";
+    return dayornight ? "CLEAR_DAY" : "CLEAR_NIGHT";
   case 1:
   case 2:
   case 3:
-    return "PARTLY_CLOUDY_DAY";
+    return dayornight ? "PARTLY_CLOUDY_DAY" : "PARTLY_CLOUDY_NIGHT";
   case 45:
   case 48:
     return "FOG";
@@ -50,10 +50,10 @@ function getIconString(weathercode) {
   }
 }
 
-export const AnimatedCurrentWeather = ({ weatherCode }) => {
+export const AnimatedCurrentWeather = ({ weatherCode, dayOrNight  }) => {
 
   
-  const iconString = getIconString(weatherCode)
+  const iconString = getIconString(weatherCode, dayOrNight)
   
 
 

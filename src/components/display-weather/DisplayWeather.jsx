@@ -23,12 +23,19 @@ export const DisplayWeather = ({ geoData }) => {
     fetchWeather();
   }, [geoData]);
 
-
-
-  console.log(geoData);
+  if(geoData) {
   return (
     <div className='weather-display'>
       <CurrentWeather {...geoData} currentWeather={currentWeather}/>
     </div>
   )
+}
+else {
+  return (
+    <div className='welcome-message'>
+      <h1>Welcome to my weather app!</h1>
+      <h2>To display weather data, type in a name of a city</h2>
+    </div>
+  )
+}
 }

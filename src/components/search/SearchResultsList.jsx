@@ -5,7 +5,7 @@ import { SearchResult } from "./SearchResult";
 export const SearchResultsList = ({ searchResults, setResultData, setHideResults, hideResults}) => {
 
 
-
+if(searchResults) {
   return (
     
     <div className={`results-list ${hideResults ? "" : "hide"}`}>
@@ -15,4 +15,5 @@ export const SearchResultsList = ({ searchResults, setResultData, setHideResults
     </div>
   
   );
+}
 };
