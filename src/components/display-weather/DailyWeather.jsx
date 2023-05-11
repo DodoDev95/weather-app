@@ -27,11 +27,13 @@ export const DailyWeather = (props) => {
             <p className="month-day">{forecastDateMonth}</p>
           </div>
           <div className="sunrise-sunset">
-            <img src={sunriseImage} alt="sunrise-icon" />
-            <p>{sunrise}</p>
+            <p>
+              <img src={sunriseImage} alt="sunrise-icon" /> {sunrise}
+            </p>
 
-            <img src={sunsetImage} alt="sunset-icon" />
-            <p>{sunset}</p>
+            <p>
+              <img src={sunsetImage} alt="sunset-icon" /> {sunset}
+            </p>
           </div>
           <div className="day-data-card">
             <p className="card-desc">Max Temp.</p>

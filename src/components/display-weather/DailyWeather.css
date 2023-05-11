@@ -15,15 +15,15 @@
 
 .sunrise-sunset {
   display: flex;
-  flex-flow: wrap;
-  align-content: space-around;
-  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around;
   height: 100%;
 }
 
 .date {
-  flex-basis: 50%;
   font-size: 1.3rem;
+  min-width: 100px;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -55,4 +55,29 @@ img {
 
 .each-date-container:last-child {
   margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+  .each-date-container {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+  }
+  .each-date-container p {
+    margin-top: 10px;
+  }
+
+  .day-data-card {
+    margin-top: 15px;
+  }
+
+  .sunrise-sunset {
+    margin-top: 10px;
+  }
+  .date {
+    font-size: 1.3rem;
+    min-width: unset;
+    margin-bottom: 10px;
+    padding: 10px 25px;
+  }
 }
