@@ -1,7 +1,7 @@
 .each-date-container {
   display: flex;
   align-items: center;
-  width: 95%;
+  width: auto;
   height: 150px;
   gap: 0px 15px;
   background-color: #f2f2f2;
