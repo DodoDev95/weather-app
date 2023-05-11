@@ -4,7 +4,6 @@ import { AnimatedCurrentWeather } from './AnimatedCurrentWeather'
 import './CurrentWeather.css'
 
 export const CurrentWeather = ({ name, admin1, country, currentWeather }) => {
-  console.log(currentWeather);
 
   if(currentWeather) {
   return (

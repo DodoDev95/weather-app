@@ -1,0 +1,60 @@
+.each-date-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: auto;
+  height: 150px;
+  gap: 0px 20px;
+  background-color: #f2f2f2;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.each-date-container p {
+  text-align: center;
+}
+
+.sunrise-sunset {
+  display: flex;
+  flex-flow: wrap;
+  align-content: space-around;
+  justify-content: center;
+  height: 100%;
+}
+
+.date {
+  flex-basis: 50%;
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.date .weekday {
+  font-size: 2rem;
+}
+
+img {
+  width: 30px;
+}
+
+.weather-info {
+  font-size: 1.5rem;
+}
+
+.day-data-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+}
+
+.each-date-container:last-child {
+  margin-bottom: 3rem;
+}
