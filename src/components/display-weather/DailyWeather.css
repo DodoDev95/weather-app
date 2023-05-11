@@ -1,10 +1,9 @@
 .each-date-container {
   display: flex;
   align-items: center;
-  padding: 10px;
-  width: auto;
+  width: 95%;
   height: 150px;
-  gap: 0px 20px;
+  gap: 0px 15px;
   background-color: #f2f2f2;
   padding: 15px;
   border-radius: 10px;
